@@ -1,0 +1,23 @@
+{
+  "name": "client-server-project",
+  "version": "1.0.0",
+  "description": "client-server-website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ShayanSolid/Client-Server-Project.git"
+  },
+  "author": "ShayanSolid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShayanSolid/Client-Server-Project/issues"
+  },
+  "homepage": "https://github.com/ShayanSolid/Client-Server-Project#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "fs-extra": "^6.0.1"
+  }
+}
