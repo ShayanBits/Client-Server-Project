@@ -1,0 +1,218 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+    background-image: url(../img/background.jpg);
+    background-color: lightgray;
+}
+
+/*Menu*/
+
+ul.navmenu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    flex-direction: row; /* keep the contents in a row */
+    flex-wrap: wrap; /* bring contents to the next line if necessary */
+    justify-content: center; /* keep the contents in the middle */
+}
+
+
+ul.navmenu li{
+    float: left;
+}
+ul.navmenu li a{
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.navmenu li a:hover{
+    background-color: darkslategray;
+}
+
+ul.navmenu li a:active{
+    background-color: darkslategray;
+}
+
+ul.navmenu .active{
+    background-color: darkgray;
+}
+h1{
+    margin-top: 50px;
+    text-align: center;
+}
+
+/*gallery*/
+
+figure.gallery {
+    border: 1px solid #ccc;
+    margin: 3px;
+}
+
+figure.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+figcaption.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.picContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.responsive {
+    padding: 0 6px;
+    width: 33.0%;
+}
+
+/*responsive*/
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+footer {
+    position: fixed;
+    background-color: black;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+/*newsletter*/
+
+input[type=text],input[type=email], select, textarea {
+    width: 100%;
+}
+
+#feedback{
+    height: 150px;
+}
+
+
+/*Carousel Overlay*/
+
+.carousel {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+.imgFixedHeigth{
+    height: auto;
+    width: 100%;
+}
+
+
+.carouselPics {
+    position: absolute;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    max-width: 1200px;
+    top: 16%;
+    z-index: 2;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mySlides {
+    display: none;
+    width: 70%;
+    margin: auto;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    width: 20%;
+    color: white;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    height: 100%;
+    text-align: center;
+}
+
+
+.picNumber {
+    color: #f2f2f2;
+    text-align: center;
+    top: 100%;
+}
+
+.next {
+    right: 15%;
+}
+
+
+.prev {
+    left: 15%;
+}
+
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev:hover .prevSpan,
+.next:hover .nextSpan{
+    display: block;
+}
+
+.prevSpan,
+.nextSpan{
+    position: relative;
+    top: 50%;
+    display: none ;
+}

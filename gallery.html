@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=PT+Sans') ;
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/carousel.js"> </script>
+    <title>Gallery</title>
+</head>
+
+<body>
+
+<ul class="navmenu">
+    <li><a href="index.html">Home</a></li>
+    <li class="active"><a href="gallery.html">Gallery</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="newsletter.html">Newsletter</a></li>
+</ul>
+
+<h1>Gallery</h1>
+    <div class="picContainer" >
+        <div class="responsive">
+            <figure class="gallery">
+                <img class="imgs" src="img/image5.jpeg" onclick="openCarousel();showImage(0)" alt="img1"/>
+                <figcaption class="desc">Add a description of the image here</figcaption>
+            </figure>
+        </div>
+        <div class="responsive">
+            <figure class="gallery">
+                <img class="imgs" src="img/image2.jpg" onclick="openCarousel();showImage(1)" alt="img2"/>
+                <figcaption class="desc">Add a description of the image here</figcaption>
+            </figure>
+        </div>
+        <div class="responsive">
+            <figure class="gallery">
+                <img class="imgs" src="img/image3.jpg" onclick="openCarousel();showImage(2)" alt="img3"/>
+                <figcaption class="desc">Add a description of the image here</figcaption>
+            </figure>
+        </div>
+        <div class="responsive">
+            <figure class="gallery">
+                <img class="imgs" src="img/image4.jpg" onclick="openCarousel();showImage(3)" alt="img4"/>
+                <figcaption class="desc">Add a description of the image here</figcaption>
+            </figure>
+        </div>
+    </div>
+
+<!--overlay-->
+
+    <div id="overlayCarousel" class="carousel" onclick="closeCarousel()"></div>
+
+    <div class="carouselPics">
+
+        <figure class="mySlides">
+            <img class="imgFixedHeigth" src="img/image5.jpeg" onclick="closeCarousel()" alt="img5"/>
+            <div class="picNumber"></div>
+        </figure>
+
+        <figure class="mySlides">
+            <img class="imgFixedHeigth" src="img/image2.jpg" onclick="closeCarousel()" alt="img2"/>
+            <div class="picNumber"></div>
+        </figure>
+
+        <figure class="mySlides">
+            <img class="imgFixedHeigth" src="img/image3.jpg" onclick="closeCarousel()" alt="img3"/>
+            <div class="picNumber"></div>
+        </figure>
+
+        <figure class="mySlides">
+            <img class="imgFixedHeigth" src="img/image4.jpg" onclick="closeCarousel()" alt="img4"/>
+            <div class="picNumber"></div>
+        </figure>
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="prevSlide()"><span class="prevSpan">&larr;</span></a>
+        <a class="next" onclick="nextSlide()"><span class="nextSpan">&rarr;</span></a>
+
+
+        <!-- Caption text -->
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+    </div>
+
+
+
+<footer>
+    <p>&copy; 2018 LOGO</p>
+</footer>
+</body>
+</html>
