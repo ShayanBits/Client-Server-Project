@@ -1,2 +1,2 @@
 # MyFirstWebsite
-It's my first website using HTML and CSS
+A brief Client-Server-Website using dynamic data injection.
