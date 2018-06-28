@@ -1,7 +1,17 @@
-[ { "heading": "Überschrift Posting 1",
-         "paragraphs": [ "Erster Absatz im Posting 1...",  "Zweiter Absatz..."]
-       },
-       { "heading": "Überschrift Posting 2",
-         "paragraphs": [ "Erster Absatz im Posting 2..."]
-       }
+[
+  {
+    "heading": "Überschrift Posting 1",
+    "paragraphs": [
+      "Erster Absatz im Posting 1...",
+      "Zweiter Absatz..."
+    ],
+    "date": "01.02.2018"
+  },
+  {
+    "heading": "Überschrift Posting 2",
+    "paragraphs": [
+      "Erster Absatz im Posting 2..."
+    ],
+    "date": "01.02.2018"
+  }
 ]
