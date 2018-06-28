@@ -1,3 +1,29 @@
+let currentSlide = 0;
+
+let imgs = document.getElementsByClassName("imgs");
+for(let i=0; i<imgs.length; i++){
+    imgs[i].addEventListener("click", function(){
+        openCarousel();
+        showImage(i);
+    });
+}
+
+let imgFixedHeigth = document.getElementsByClassName("imgFixedHeigth");
+for(let i=0; i<imgs.length; i++){
+    imgFixedHeigth[i].addEventListener("click", function(){
+        closeCarousel();
+    });
+}
+
+document.getElementsByClassName("carouselPics")[0].addEventListener("click", closeCarousel());
+document.getElementById("overlayCarousel").addEventListener("click", closeCarousel());
+document.getElementsByClassName("prev")[0].addEventListener("click", function(){
+    prevSlide();
+});
+document.getElementsByClassName("next")[0].addEventListener("click", function(){
+    nextSlide();
+});
+
 
 function openCarousel() {
     document.getElementById('overlayCarousel').style.display = "block";
@@ -7,10 +33,6 @@ function openCarousel() {
 function closeCarousel() {
     document.getElementById('overlayCarousel').style.display = "none";
     document.getElementsByClassName('carouselPics')[0].style.display = "none";
-}
-
-function test(){
-    console.log("test");
 }
 
 function showImage(n) {
@@ -27,28 +49,10 @@ function showImage(n) {
     currentSlide = n;
 }
 
-function nextSlide(ev) {
-    //ev.stopPropagation();
+function nextSlide() {
     showImage(currentSlide + 1);
 }
 
-function prevSlide(ev) {
-    //ev.stopPropagation();
+function prevSlide() {
     showImage(currentSlide - 1);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n - 1);
-}
-
-function showLeftArrow() {
-    console.log("left");
-    let x = document.getElementsByClassName("prevSpan");
-    x.display = 'block';
-}
-
-function showRightArrow() {
-    console.log("right");
-    let x = document.getElementsByClassName("nextSpan");
-    x.display = 'block';
 }

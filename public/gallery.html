@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=PT+Sans') ;
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/carousel.js" type="module"> </script>
+    <title>Gallery</title>
+</head>
+
+<body>
+
+<ul class="navmenu">
+    <li><a href="index.html">Home</a></li>
+    <li class="active"><a href="gallery.html">Gallery</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="newsletter.html">Newsletter</a></li>
+</ul>
+
+<h1>Gallery</h1>
+<div class="picContainer" >
+    <div class="responsive">
+        <figure class="gallery">
+            <img class="imgs" src="img/gallary/image5.jpeg" alt="img1"/>
+            <figcaption class="desc">Add a description of the image here</figcaption>
+        </figure>
+    </div>
+    <div class="responsive">
+        <figure class="gallery">
+            <img class="imgs" src="img/gallary/image2.jpg"  alt="img2"/>
+            <figcaption class="desc">Add a description of the image here</figcaption>
+        </figure>
+    </div>
+    <div class="responsive">
+        <figure class="gallery">
+            <img class="imgs" src="img/gallary/image3.jpg" alt="img3"/>
+            <figcaption class="desc">Add a description of the image here</figcaption>
+        </figure>
+    </div>
+    <div class="responsive">
+        <figure class="gallery">
+            <img class="imgs" src="img/gallary/image4.jpg" alt="img4"/>
+            <figcaption class="desc">Add a description of the image here</figcaption>
+        </figure>
+    </div>
+</div>
+
+<!--overlay-->
+
+<div id="overlayCarousel" class="carousel" ></div>
+
+<div class="carouselPics">
+
+    <figure class="mySlides">
+        <img class="imgFixedHeigth" src="img/gallary/image5.jpeg" alt="img5"/>
+        <div class="picNumber"></div>
+    </figure>
+
+    <figure class="mySlides">
+        <img class="imgFixedHeigth" src="img/gallary/image2.jpg"  alt="img2"/>
+        <div class="picNumber"></div>
+    </figure>
+
+    <figure class="mySlides">
+        <img class="imgFixedHeigth" src="img/gallary/image3.jpg" alt="img3"/>
+        <div class="picNumber"></div>
+    </figure>
+
+    <figure class="mySlides">
+        <img class="imgFixedHeigth" src="img/gallary/image4.jpg" alt="img4"/>
+        <div class="picNumber"></div>
+    </figure>
+    <!-- Next/previous controls -->
+    <a class="prev"><span class="prevSpan">&larr;</span></a>
+    <a class="next"><span class="nextSpan">&rarr;</span></a>
+
+
+    <!-- Caption text -->
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
+</div>
+
+
+
+<footer>
+    <p>&copy; 2018 LOGO</p>
+</footer>
+</body>
+</html>
