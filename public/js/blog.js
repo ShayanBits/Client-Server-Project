@@ -1,4 +1,3 @@
-const BLOG_JSON_PATH = "/Users/shayansh/Documents/Programming/eclipce_workspace_Org/Client-Server-Project/public/data/blog.json";
 
 fetch('./api/blog')
     .then(

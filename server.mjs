@@ -15,8 +15,10 @@ app.get('/api/blog', (req, res) => {
 app.get('/api/gallery', (req, res) => {
     res.sendfile(GALLERY_JSON_PATH);
 });
-app.get('/api/newsletter', (req, res) => {
-    res.sendfile(NEWSLETTER_JASON_PATH);
+app.post('/api/newsletter', (req, res) => {
+    let x = req.body;
+    console.log(x);
+    res.sendfile(GALLERY_JSON_PATH);
 });
 
 

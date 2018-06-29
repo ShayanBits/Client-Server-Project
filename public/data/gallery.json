@@ -1,4 +1,18 @@
-[ { "path": "img/image2.jpeg", "description": "A butterfly" }
-{ "path": "img/image3.jpeg", "description": "A butterfly" },
-{ "path": "img/image4.jpeg", "description": "A butterfly" },
-{ "path": "img/image5.jpeg", "description": "A butterfly" }]
+[
+  {
+    "path": "img/gallery/image2.jpg",
+    "description": "The lake"
+  },
+  {
+    "path": "img/gallery/image3.jpg",
+    "description": "Women"
+  },
+  {
+    "path": "img/gallery/image4.jpg",
+    "description": "NYC"
+  },
+  {
+    "path": "img/gallery/image5.jpeg",
+    "description": "A flower"
+  }
+]
