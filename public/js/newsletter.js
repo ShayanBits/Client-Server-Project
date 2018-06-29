@@ -32,7 +32,7 @@ function sendJson() {
     fetch("/api/newsletter/",
         {
             method: "POST",
-            body: data
+            body: JSON.stringify(data)
         })
         .then(function(res){ console.log(res.toString()) })
         .then(function(data){ alert( JSON.stringify( data ) ) })

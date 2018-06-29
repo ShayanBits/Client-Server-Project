@@ -18,8 +18,26 @@ app.get('/api/gallery', (req, res) => {
 app.post('/api/newsletter', (req, res) => {
     let x = req.body;
     console.log(x);
-    res.sendfile(GALLERY_JSON_PATH);
+    res.send("test send")
+    //res.sendfile(GALLERY_JSON_PATH);
 });
 
 
 app.listen(3000, ()=> console.log('App is listening on port 3000!'));
+
+
+
+function validRegister(data) {
+    let alreadyRegistered
+    for(let i=0 ; i<registered.length; i++){
+        if (data.email == registered[i].email){
+            console.log('already exist');
+            alreadyRegistered = true;
+            //return error
+        }
+    }
+    if(!alreadyRegistered){
+        registered.add('Email ' + data.email + 'name' + data.name);
+        //approval message
+    }
+}
