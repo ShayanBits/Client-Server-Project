@@ -29,12 +29,13 @@ function createJson() {
 function sendJson() {
     let data = createJson();
 
-    fetch("/api/newsletter/",
+    fetch("/api/newsletter",
         {
             method: "POST",
             body: JSON.stringify(data)
         })
-        .then(function(res){ console.log(res.toString()) })
-        .then(function(data){ alert( JSON.stringify( data ) ) })
+        .then(function(res){
+            console.log(res.toString())
+        })
 
 }

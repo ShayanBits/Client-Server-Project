@@ -17,7 +17,8 @@ app.get('/api/gallery', (req, res) => {
 });
 app.post('/api/newsletter', (req, res) => {
     let x = req.body;
-    console.log(x);
+    validRegister(x);
+    console.log();
     res.send("test send")
     //res.sendfile(GALLERY_JSON_PATH);
 });
@@ -26,9 +27,13 @@ app.post('/api/newsletter', (req, res) => {
 app.listen(3000, ()=> console.log('App is listening on port 3000!'));
 
 
+// I still get problem in this part
 
+
+// validRegister check in the newsletter.json if the email address in request body is already registered and return
+// a possible msg
 function validRegister(data) {
-    let alreadyRegistered
+    let alreadyRegistered;
     for(let i=0 ; i<registered.length; i++){
         if (data.email == registered[i].email){
             console.log('already exist');
