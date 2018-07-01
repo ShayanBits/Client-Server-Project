@@ -1,26 +1,34 @@
 let currentSlide = 0;
 
-let imgs = document.getElementsByClassName("imgs");
-for(let i=0; i<imgs.length; i++){
-    imgs[i].addEventListener("click", function(){
-        openCarousel();
-        showImage(i);
-    });
+function carousel() {
+    let imgs = document.getElementsByClassName("imgs");
+    for (let i = 0; i < imgs.length; i++) {
+        imgs[i].addEventListener("click", function () {
+            openCarousel();
+            showImage(i);
+        });
+    }
+
 }
 
+// module.exports = {
+//     carousel : carousel
+// };
+
+
 let imgFixedHeigth = document.getElementsByClassName("imgFixedHeigth");
-for(let i=0; i<imgs.length; i++){
-    imgFixedHeigth[i].addEventListener("click", function(){
+for (let i = 0; i < imgs.length; i++) {
+    imgFixedHeigth[i].addEventListener("click", function () {
         closeCarousel();
     });
 }
 
 document.getElementsByClassName("carouselPics")[0].addEventListener("click", closeCarousel());
 document.getElementById("overlayCarousel").addEventListener("click", closeCarousel());
-document.getElementsByClassName("prev")[0].addEventListener("click", function(){
+document.getElementsByClassName("prev")[0].addEventListener("click", function () {
     prevSlide();
 });
-document.getElementsByClassName("next")[0].addEventListener("click", function(){
+document.getElementsByClassName("next")[0].addEventListener("click", function () {
     nextSlide();
 });
 
@@ -39,13 +47,17 @@ function showImage(n) {
     let i;
     let number = document.getElementsByClassName("picNumber");
     let slides = document.getElementsByClassName("mySlides");
-    if (n >= slides.length) { n = 0; }
-    if (n < 0) {n = slides.length - 1; }
-    for ( i=0; i<slides.length; i++ ){
-        slides[i].style.display="none";
+    if (n >= slides.length) {
+        n = 0;
     }
-    slides[n].style.display ="block";
-    number[n].innerHTML = n+1 + '/' + slides.length;
+    if (n < 0) {
+        n = slides.length - 1;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[n].style.display = "block";
+    number[n].innerHTML = n + 1 + '/' + slides.length;
     currentSlide = n;
 }
 

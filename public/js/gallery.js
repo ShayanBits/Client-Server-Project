@@ -61,6 +61,9 @@ function addFigure(path, description) {
 
 //carousel.js
 
+    // var carousel = require('./carousel.js').carousel();
+    // carousel();
+
     let currentSlide = 0;
 
     let imgs = document.getElementsByClassName("imgs");
